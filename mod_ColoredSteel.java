@@ -3,7 +3,7 @@ package net.minecraft.src;
 public class mod_ColoredSteel extends BaseMod {
 
 	public static int color[] = new int[15];
-	public static final Item ColoredSteel = new ItemSteel(Block.blockSteel.blockID - 256).setItemName("Steel");
+	public static final Item ColoredSteel = new ItemMetadata(Block.blockSteel.blockID - 256, Block.blockSteel).setItemName("Steel");
 	
 	public void load() {
 		color[0] = ModLoader.addOverride("/terrain.png", "/img/orange.png");
@@ -30,6 +30,10 @@ public class mod_ColoredSteel extends BaseMod {
                         new ItemStack(Item.dyePowder, 1, i), new ItemStack(Item.itemsList[Block.blockSteel.blockID], 1, 0)
                     });
         }
+        ModLoader.addShapelessRecipe(new ItemStack(Block.blockSteel, 1, 15), new Object[]
+        		{
+        	new ItemStack(Item.coal,1), new ItemStack(Item.itemsList[Block.blockSteel.blockID], 1, 0)
+        		});
 	}
 	
 	public String getVersion() {
