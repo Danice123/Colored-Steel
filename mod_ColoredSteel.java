@@ -30,10 +30,6 @@ public class mod_ColoredSteel extends BaseMod {
                         new ItemStack(Item.dyePowder, 1, i), new ItemStack(Item.itemsList[Block.blockSteel.blockID], 1, 0)
                     });
         }
-        ModLoader.addShapelessRecipe(new ItemStack(Block.blockSteel, 1, 15), new Object[]
-        		{
-        	new ItemStack(Item.coal,1), new ItemStack(Item.itemsList[Block.blockSteel.blockID], 1, 0)
-        		});
 	}
 	
 	public String getVersion() {
