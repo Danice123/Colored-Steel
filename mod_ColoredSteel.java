@@ -1,6 +1,6 @@
 package net.minecraft.src;
 
-public class mod_ColoredSteel extends BaseMod {
+public class mod_ColoredSteel extends BaseModMP {
 
 	public static final Item ColoredSteel = new ItemMetadata(Block.blockSteel.blockID - 256, Block.blockSteel).setItemName("Steel");
 	
